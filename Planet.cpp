@@ -1,15 +1,25 @@
 #include "Planet.h"
 #include <stdlib.h>
-//#include <iostream> 
 
-//using namespace std;
 
 
 Planet::Planet(int distance){
-	//this->id=id;	
+		
 	this->distance=rand()%3001;
 	this->pos=rand()%360;
-	this->type=rand()%3; //   'h' = habitable, 'r'=rocky, 'g'=gaseous        yeni bir array veya switch case..........
+	this->type=rand()%3; 
+	int r=rand()%3;
+
+	if(r==0){
+		this->type='h';
+	}
+	if(r==1){
+		this->type='r';
+	}
+	if(r==2){
+		this->type='g';
+	} 
+
 }
 
 int Planet::orbit(){
@@ -19,7 +29,8 @@ int Planet::orbit(){
 	return this->pos;
 }
 
-long int Planet::getID(){
+
+/*long int Planet::getID(){
 	return this->id;
 }
 int Planet::getDistance(){
@@ -31,16 +42,6 @@ int Planet::getPosition(){
 
 char Planet::getType(){
 
-	if(this->type==0){
-		this->type='h';
-	}
-	if(this->type==1){
-		this->type='r';
-	}
-	if(this->type==2){
-		this->type='g';
-	} 
-
 	return this->type;
-}
+}*/
 	
