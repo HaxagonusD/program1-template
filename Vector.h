@@ -1,9 +1,13 @@
-#ifndef HEADER_NA
-#define HEADER_NA
+#ifndef HEADER_V
+#define HEADER_V
+#include "Planet.h"
+
+
 class Vector{
 	private:
 		int index;
-		Planet * array[]; 
+		unsigned size;
+		Planet ** vectorArray;
 	public:
 
 		~Vector();

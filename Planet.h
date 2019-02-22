@@ -1,5 +1,5 @@
-#ifndef HEADER_NA
-#define HEADER_NA
+#ifndef HEADER_P
+#define HEADER_P
 class Planet{
 	private:
 		int id;
@@ -9,10 +9,20 @@ class Planet{
 	public:
 		Planet(int,int);
         	int orbit();
-		long int getID();
-        	int getDistance();
-        	int getPosition();
-		char getType();
+		long int getID(){
+			return this->id;
+		}
+		int getDistance(){
+			return this->distance;
+		}
+		int getPosition(){
+			return this->pos;
+		}	
+
+		char getType(){
+
+			return this->type;
+		}
 		
 }; 
 
